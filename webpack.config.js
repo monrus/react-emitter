@@ -8,6 +8,9 @@ module.exports = {
   output: {
     filename: 'index.js',
     path: path.resolve(appDirectory, './build'),
+    library: 'react-emitter',
+    libraryTarget: 'umd',
+    umdNamedDefine: true
   },
   module: {
     rules: [
