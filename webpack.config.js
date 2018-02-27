@@ -9,12 +9,11 @@ module.exports = {
     filename: 'index.js',
     path: path.resolve(appDirectory, './build'),
     library: 'react-emitter',
-    libraryTarget: 'umd',
-    umdNamedDefine: true,
+    libraryTarget: 'commonjs2',
   },
-  externals: {
-    react: 'react',
-  },
+  // externals: {
+  //   react: 'react',
+  // },
   module: {
     rules: [
       {

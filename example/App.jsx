@@ -1,5 +1,6 @@
 import React from 'react'
 import { Emitter } from '../lib'
+console.log(Emmiter)
 
 class Child extends React.Component {
   constructor() {

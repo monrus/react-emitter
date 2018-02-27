@@ -6,7 +6,7 @@
   "scripts": {
     "test": "test",
     "example": "parcel example/index.html",
-    "build": "webpack --mode production"
+    "build": "webpack --mode development"
   },
   "repository": {
     "type": "git",
