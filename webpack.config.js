@@ -10,16 +10,22 @@ module.exports = {
     path: path.resolve(appDirectory, './build'),
     library: 'react-emitter',
     libraryTarget: 'umd',
-    umdNamedDefine: true
+    umdNamedDefine: true,
+  },
+  externals: {
+    react: 'react',
   },
   module: {
-    rules: [
+    loaders: [
       {
-        test: /\.js$/,
+        test: /(\.jsx|\.js)$/,
+        loader: 'babel',
+        exclude: /(node_modules|bower_components)/
+      },
+      {
+        test: /(\.jsx|\.js)$/,
+        loader: 'eslint-loader',
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-        },
       },
     ],
   },
