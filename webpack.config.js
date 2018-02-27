@@ -16,16 +16,13 @@ module.exports = {
     react: 'react',
   },
   module: {
-    loaders: [
+    rules: [
       {
-        test: /(\.jsx|\.js)$/,
-        loader: 'babel',
-        exclude: /(node_modules|bower_components)/
-      },
-      {
-        test: /(\.jsx|\.js)$/,
-        loader: 'eslint-loader',
+        test: /\.js$/,
         exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+        },
       },
     ],
   },
