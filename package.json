@@ -1,11 +1,12 @@
 {
   "name": "react-emitter",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "test",
-    "example": "parcel example/index.html"
+    "example": "parcel example/index.html",
+    "build": "parcel build lib/index.js --out-dir build"
   },
   "repository": {
     "type": "git",

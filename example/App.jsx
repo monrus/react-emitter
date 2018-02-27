@@ -1,5 +1,5 @@
 import React from 'react'
-import { Emitter, Listener } from '../lib'
+import { Emitter } from '../lib'
 
 class Child extends React.Component {
   constructor() {
@@ -9,7 +9,7 @@ class Child extends React.Component {
     }
   }
   componentDidMount() {
-    this.props.onListener('change', (values) => {
+    this.props.addListener('change', (values) => {
       console.log(values)
     })
   }
@@ -21,7 +21,7 @@ class Child extends React.Component {
     )
   }
 }
-const ChildListener = Listener(Child)
+const ChildListener = Emitter(Child)
 
 class App extends React.PureComponent {
   render() {
