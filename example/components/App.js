@@ -6,12 +6,15 @@ class App extends React.PureComponent {
   render() {
     return (
       <div>
-        <input
+        <button
           defaultValue=""
-          onChange={(e) => {
+          onClick={(e) => {
+            debugger
             this.props.emit('change', e.target.value)
           }}
-        />
+        >
+          Кликни
+        </button>
         <Child />
       </div>
     )
