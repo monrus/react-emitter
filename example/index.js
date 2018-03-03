@@ -1,9 +1,9 @@
 import ReactDOM from 'react-dom'
 import React from 'react'
-import App from './App'
-import { EmitterProvider } from '../lib'
+import { EmitterProvider } from 'react-emitter'
+import App from './components/App'
 
-const AppProvider = EmitterProvider(<App />) // eslint-disable-line
+const AppProvider = EmitterProvider(App) // eslint-disable-line
 
 ReactDOM.render(
   <AppProvider />,
